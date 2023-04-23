@@ -1,0 +1,69 @@
+<nav class="navigation-bar w-full bg-yellow-400 flex justify-center align-center h-12 items-center rounded-sm">
+   <a href="" class="text-black font-bold flex items-center hover:text-white">Help yourself</a>
+ </nav>
+<div class="container w-8/12 mx-auto">
+  <div class="main-content-container flex justify-between">
+    <div class="addiction-selector w-3/12 h-96 bg-slate-100 mt-6 rounded p-8">
+      <app-user-level-profile [curPlayerData]="curPlayerInfo"></app-user-level-profile>
+      <nav class="flex justify-center items-center mt-5">
+        <a href="/" class="text-white px-5 py-3 bg-red-500 rounded hover:opacity-95">Back to the menu</a>
+      </nav>
+    </div>
+  <div [class]="redirectionLinkText[2].hiddenElem + ' courses-elem-container w-8/12 bg-slate-100 mt-6 rounded'">
+  <div [class]="numberOfRows + ' addiction-selector w-full h-full grid grid-cols-2 gap-4 grid-rows-2 p-5'">
+    <div class="w-full bg-slate-200 rounded relative">
+      <div id="help-yourself-component" class="button-container w-full h-full flex justify-center items-center">
+        <div id="star-img-container" style="top: -30px" class="absolute left-[-20px] w-[63px] h-[60px] flex justify-center items-center pt-4">
+      <h3 id="level-indicator">{{redirectionLinkText[0].playerLevel}}</h3>
+  </div>
+        <button [disabled]="disabledCourses[0]" (click)="redirectToALink($event)" id="course1" class="text-center rounded-full text-white bg-blue-800 px-5 py-2 w-10/12 hover:scale-110 duration-75">{{redirectionLinkText[0].redirectionText}}</button>
+      </div>
+    </div>
+    <div [class]="redirectionLinkText[2].hiddenElem + ' w-full bg-slate-200 rounded flex justify-center items-center relative'">
+      <div id="help-yourself-component" class="button-container w-full h-full flex justify-center items-center">
+        <div id="star-img-container" style="top: -30px" class="absolute left-[-20px] w-[63px] h-[60px] flex justify-center items-center pt-4">
+          <h3 id="level-indicator">{{redirectionLinkText[1].playerLevel}}</h3>
+      </div>
+        <button [disabled]="disabledCourses[1]" (click)="redirectToALink($event)" id="course2" class="text-center rounded-full text-white bg-blue-800 px-5 py-2 w-10/12 hover:scale-110 duration-75">{{redirectionLinkText[1].redirectionText}}</button>
+      </div>
+    </div>
+    <div [class]="redirectionLinkText[2].hiddenElem + ' w-full bg-slate-200 rounded'">
+      <div id="support-group-elem" class="button-container w-full h-full flex justify-center items-center relative">
+        <div id="star-img-container" style="top: -30px" class="absolute left-[-20px] w-[63px] h-[60px] flex justify-center items-center pt-4">
+          <h3 id="level-indicator">{{redirectionLinkText[2].playerLevel}}</h3>
+      </div>
+        <button [disabled]="disabledCourses[2]" (click)="redirectToALink($event)" id="course3" class="rounded-full text-white bg-blue-800 px-5 py-2 w-10/12 text-center hover:scale-110 duration-75">{{redirectionLinkText[2].redirectionText}}</button>
+      </div>
+    </div>
+    <div [class]="redirectionLinkText[3].hiddenElem + ' w-full bg-slate-200 rounded'">
+      <div id="asking-for-help-elem" class="button-container w-full h-full flex justify-center items-center relative">
+        <div id="star-img-container" style="top: -30px" class="absolute left-[-20px] w-[63px] h-[60px] flex justify-center items-center pt-4">
+          <h3 id="level-indicator">{{redirectionLinkText[3].playerLevel}}</h3>
+      </div>
+        <button [disabled]="disabledCourses[3]" (click)="redirectToALink($event)" id="course4" class="rounded-full text-white bg-blue-800 px-5 py-2 w-10/12 text-center hover:scale-110 duration-75">{{redirectionLinkText[3].redirectionText}}
+        </button>
+      </div>
+    </div>
+    <div [class]="redirectionLinkText[4].hiddenElem + ' w-full bg-slate-200 rounded'">
+      <div id="asking-for-help-elem" class="button-container w-full h-full flex justify-center items-center relative">
+        <div id="star-img-container" style="top: -30px" class="absolute left-[-20px] w-[63px] h-[60px] flex justify-center items-center pt-4">
+          <h3 id="level-indicator">{{redirectionLinkText[4].playerLevel}}</h3>
+      </div>
+        <button [disabled]="disabledCourses[4]" (click)="redirectToALink($event)" id="course5" class="rounded-full text-white bg-blue-800 px-5 py-2 w-10/12 text-center hover:scale-110 duration-75">{{redirectionLinkText[4].redirectionText}}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="w-full text-center mt-5">
+    <button
+    type="button"
+    style="margin: 0px auto !important"
+    class="mt-5 block bg-yellow-400 inline-block rounded px-14 py-3 hover:text-white transition-all duration-200"
+    (click)="loadMoreEvents()"
+    >
+    Load more courses
+  </button>
+</div>
+</div>
+  </div>
+</div>

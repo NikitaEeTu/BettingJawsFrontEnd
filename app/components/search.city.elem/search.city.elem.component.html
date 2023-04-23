@@ -1,0 +1,6 @@
+<div id="support-group-elem" class="button-container w-full h-8 flex justify-center items-center text-neutral-500">
+        <select class="w-full h-full" data-te-select-init>
+          <option value="" selected disabled>Selecy your country</option>
+          <option *ngFor="let countryObj of allCountryInfo" [value]="countryObj.name">{{countryObj.name}}</option>
+        </select>
+  </div>

@@ -1,0 +1,43 @@
+<div class="header">
+  <nav class="navigation-bar w-full bg-yellow-400 flex justify-between h-12 items-center rounded-sm px-10">
+    <a href="" id="product-name" class="text-black">BETTING JAWS</a>
+    <div class="flex" *ngIf="isUserHasLoggedOnce">
+     <a href="/" class="text-black flex items-center hover:text-white duration-75" (click)="logOut()">Logout</a>
+     </div>
+    <div class="flex" *ngIf="!isUserHasLoggedOnce">
+    <a href="/login" class="text-black flex items-center hover:text-white duration-75">Login</a>
+    <a href="/register" class="text-white flex items-center hover:text-yellow-300 ml-5 bg-black px-4 py-2 rounded duration-75">Register</a>
+    </div>
+   </nav>
+</div>
+<div class="container w-8/12 mx-auto">
+  <div class="main-content-container flex justify-between">
+  <div class="addiction-selector w-3/12 h-96 bg-slate-100 mt-6 rounded">
+    <nav class="flex justify-center items-center h-full ">
+      <p href="" class="font-bold text-black text-blue-800 border-blue-800 px-10 py-2"><q >Quit while you’re ahead. All the best gamblers do.</q>
+        <span class="block mt-1 text-right">- Baltasar Gracián</span>
+    </nav>
+  </div>
+  <div class="addiction-selector w-8/12 h-96 bg-slate-100 mt-6 rounded grid grid-cols-2 gap-4 grid-rows-2 p-5">
+    <div class="w-full bg-slate-200 rounded">
+      <div id="help-yourself-component" class="button-container w-full h-full flex justify-center items-center">
+        <a class="rounded-full text-white bg-blue-800 px-5 py-2 w-10/12 text-center hover:opacity-95 hover:scale-110 duration-75" href="/courses">Help yourself</a>
+      </div>
+    </div>
+    <div class="w-full bg-slate-200 rounded flex justify-center items-center">
+      <iframe class="w-full h-full px-2 py-3" src="https://www.youtube.com/embed/VJUtlEuVLSw?autoplay=1&mute=1" title="What makes you vulnerable to a gambling addiction? | Maia Szalavitz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="w-full bg-slate-200 rounded">
+      <div id="support-group-elem" class="button-container w-full h-full flex justify-center items-center">
+        <a href="/support-groups" class="rounded-full text-white bg-blue-800 px-5 py-2 w-10/12 text-center hover:scale-110 duration-75">Join a support group</a>
+      </div>
+    </div>
+    <div class="w-full bg-slate-200 rounded">
+      <div id="asking-for-help-elem" class="button-container w-full h-full flex justify-center items-center">
+        <a href="/ask-for-help" class="rounded-full text-white bg-blue-800 px-5 py-2 w-10/12 text-center hover:scale-110 duration-75">Ask for the professional help
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,26 @@
+.small-lose-circle{
+  background-image:
+  linear-gradient(180deg, transparent 50%, #d1d1d1 50%),
+  linear-gradient(90deg, #d1d1d1 50%, transparent 50%);
+}
+
+.medium-lose-circle{
+  background-image:
+      linear-gradient(-90deg, transparent 50%, #d1d1d1 50%),
+      linear-gradient(90deg, #d1d1d1 50%, transparent 50%);
+}
+
+.big-lose-circle{
+  background-image:
+    linear-gradient(00deg, #0e253f 50%, transparent 50%),
+    linear-gradient(90deg, #d1d1d1 50%, transparent 50%);
+}
+
+.default-lose-circle{
+background: #d1d1d1;
+}
+
+#chart{
+  width: 50% !important;
+  height: 50% !important;
+}

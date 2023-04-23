@@ -1,0 +1,8 @@
+#star-img-container {
+  background-image: url(../../images/course-page/course-first-page/star-icon.svg);
+  background-size: cover;
+}
+
+#level-indicator{
+  margin-bottom: 0px !important;
+}

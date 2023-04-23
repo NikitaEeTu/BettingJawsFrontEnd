@@ -1,0 +1,20 @@
+
+@media screen and (max-width: 650px) {
+  #support-group-container, #video-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  #video-container button{
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  #video-elem{
+   width: 80%;
+  }
+  .result-title{
+    text-align: center;
+  }
+}
+

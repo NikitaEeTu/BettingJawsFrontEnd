@@ -1,0 +1,20 @@
+img{
+  max-width: 25% !important;
+  max-height: 25% !important;
+}
+
+.shake{
+  animation: shake 0.5s infinite linear ;
+}
+
+@keyframes shake{
+  0%{
+      transform: rotate(8deg);
+  }
+  50%{
+      transform: rotate(-8deg);
+  }
+  100%{
+      transform: rotate(8deg);
+  }
+}

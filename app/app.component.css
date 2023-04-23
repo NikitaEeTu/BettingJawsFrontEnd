@@ -1,0 +1,19 @@
+.button-container {
+  background-position-x: 95%;
+  background-position-y: 20%;
+  background-size: 64px 64px;
+  background-repeat: no-repeat;
+}
+
+#help-yourself-component{
+  background-image: url(./images/main-page/self-confrontation.png);
+}
+
+#support-group-elem{
+  background-image: url(./images/main-page/conversation.png);
+}
+
+#asking-for-help-elem{
+  background-image: url(./images/main-page/handshake.png);
+}
+

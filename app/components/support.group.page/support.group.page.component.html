@@ -1,0 +1,121 @@
+<nav class="navigation-bar w-full bg-yellow-400 flex justify-center h-12 items-center rounded-sm">
+  <a href="" class="text-black flex items-center hover:text-white font-bold">Join a support group</a>
+</nav>
+<div class="container w-9/12 mx-auto">
+  <div class="main-content-container flex justify-between">
+    <back-to-main-menu class="w-2/12 h-96"></back-to-main-menu>
+  <div class="courses-elem-container w-9/12 bg-slate-100 mt-6 rounded h-96 p-3">
+  <div class="addiction-selector w-full h-full flex justify-between">
+    <div class="separate-cards grid grid-rows-2 grid-cols-1 gap-4 w-5/12">
+    <div class="w-full bg-slate-200 rounded flex items-center p-2">
+      <div id="support-group-elem" class="button-container w-full h-full flex justify-center items-center">
+        <select name="" id="" class="w-10/12 h-8 rounded">
+          <option value="Estonia">Estonia</option>
+          <option value="Latvia">Latvia</option>
+          <option value="Lithuania">Lithuania</option>
+        </select>
+      </div>
+      <button
+      type="button"
+      class="text-inline-block flex justify-center rounded bg-black px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-success-600 hover:shadow-[0_8px_9px_-4px_rgba(20,164,77,0.3),0_4px_18px_0_rgba(20,164,77,0.2)] focus:bg-success-600 focus:shadow-[0_8px_9px_-4px_rgba(20,164,77,0.3),0_4px_18px_0_rgba(20,164,77,0.2)] focus:outline-none focus:ring-0 active:bg-success-700 active:shadow-[0_8px_9px_-4px_rgba(20,164,77,0.3),0_4px_18px_0_rgba(20,164,77,0.2)]"
+      (click)="paginationButtonClick()"
+      >
+      Search
+    </button>
+    </div>
+    <div class="w-full bg-slate-200 rounded">
+      <div id="asking-for-help-elem" class="button-container w-full h-full flex justify-center items-center">
+        <iframe class="w-full h-full px-2" src="https://www.youtube.com/embed/LP_bYyQ1SWw?autoplay=1&mute=1" title="Kelly - a gambling addiction story" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="w-6/12 bg-slate-200 rounded">
+    <div id="help-yourself-component" class="button-container w-full h-full flex justify-center items-center">
+      <div class="flex flex-col">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+              <table class="w-full text-center text-sm font-light border-2 border-double border-black overflow-scroll">
+                <tbody>
+                  <tr class="border-b dark:border-neutral-500 border-b-2 border-double border-black">
+                    <td class="whitespace-nowrap px-6 py-4 font-medium">
+                      Group name
+                    </td>
+                    <td class="whitespace-nowrap px-6 py-4">{{curSupportGroup.groupName}}</td>
+                  </tr>
+                  <tr
+                    class="border-b border-primary-200 bg-primary-100 text-neutral-800 border-b-2 border-double border-black">
+                    <td class="whitespace-nowrap px-6 py-4 font-medium">
+                      City
+                    </td>
+                    <td class="whitespace-nowrap px-6 py-4">{{curSupportGroup.city}}</td>
+                  </tr>
+                  <tr
+                  class="border-b border-primary-200 bg-primary-100 text-neutral-800 border-b-2 border-double border-black">
+                  <td class="whitespace-nowrap px-6 py-4 font-medium">
+                    Type
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4">{{curSupportGroup.type}}</td>
+                </tr>
+                <tr
+                  class="border-b border-primary-200 bg-primary-100 text-neutral-800 border-b-2 border-double border-black">
+                  <td class="whitespace-nowrap px-6 py-4 font-medium">
+                    Creator
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4">{{curSupportGroup.creatorFirstName}} {{curSupportGroup.creatorLastName}}</td>
+                </tr>
+                </tbody>
+              </table>
+              <div class="flex justify-center">
+              <a [href]="curSupportGroup.website" class="mt-5 border-2 border-solid p-3 bg-blue-800 text-white rounded" target="_blank">Visit support group website</a>
+            </div>
+            <div class="flex justify-center mt-5">
+              <nav aria-label="Page navigation example">
+                <ul class="list-style-none flex">
+                  <li>
+                    <a
+                    class="relative block rounded-full bg-transparent py-1.5 px-3 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+                      (click)="setPreviousBtn()"
+                      >Previous</a>
+                  </li>
+                  <li>
+                    <a
+                      class="relative block rounded-full bg-transparent py-1.5 px-3 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100  dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+                      (click)="changeSupportGroup($event)"
+                      >{{paginationButtonIndexes.firstBtn}}</a
+                    >
+                  </li>
+                  <li aria-current="page">
+                    <a
+                    class="relative block rounded-full bg-transparent py-1.5 px-3 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+                      (click)="changeSupportGroup($event)"
+                      >{{paginationButtonIndexes.secondBtn}}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="relative block rounded-full bg-transparent py-1.5 px-3 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+                      (click)="changeSupportGroup($event)"
+                      >{{paginationButtonIndexes.thirdBtn}}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="relative block rounded-full bg-transparent py-1.5 px-3 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+                      (click)="setNextBtn()"
+                      >Next</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+  </div>
+</div>

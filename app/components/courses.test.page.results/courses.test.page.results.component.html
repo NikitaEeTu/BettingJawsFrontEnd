@@ -1,0 +1,33 @@
+<div id="result-container" *ngIf='show'>
+  <h2 class="result-title" *ngIf="isAddicted">We found that you may have a gambling addiction. Please refer to our materials.</h2>
+  <h2 class="result-title" *ngIf="!isAddicted">We don't found that you have a gambling addiction. But still refer to our materials.</h2>
+  <div id="video-material-container" class="suggestions-container py-5 flex justify-between flex-wrap">
+      <div id="video-container" class="w-6/12 h-5/6">
+      <iframe id="video-elem" class="w-full py-4" src="https://www.youtube.com/embed/ZO7YCKYHMEo" title="Joe - a  gambling addiction story" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <a
+      href="http://localhost:4200/course/videos"
+              type="button"
+              class="my-7 w-full inline-block rounded bg-yellow-300 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-base shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] text-center"
+              data-te-ripple-init>
+              Click to see other videos
+      </a>
+      </div>
+      <div id="support-group-container" class="flex justify-center w-6/12 h-5/6">
+          <div
+            class="block max-w-sm rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
+            <h3
+              class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+              Be a part of a new family
+            </h3>
+            <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+            I want you to know that you don't have to go through a gambling addiction alone. Click the button below and connect with people who has the same problem
+            </p>
+            <a
+            href="http://localhost:4200/support-groups"
+              class="w-full inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-base shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] text-center"
+              data-te-ripple-init>
+              Find you support group
+          </a>
+          </div>
+        </div>
+  </div>

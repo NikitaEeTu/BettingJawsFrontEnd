@@ -1,0 +1,28 @@
+<div class="block p-6 rounded-lg shadow-lg bg-white max-w-2xl mx-auto  mt-20 text-center">
+  <div class="progress-container flex w-full justify-between">
+    <test-page-progress-bar [progressPoint]="curNumberOfProgressPoints.toFixed(2).toString() + '%'" class="w-4/12 bg-gray-200 h-5 mb-6"></test-page-progress-bar>
+    <player-level-progress-bar [playerXP]="curNumberBarXpPoints.toFixed(2).toString() + '%'" [playerXpNumber]="curNumberOfPlayerXPPoints" [curPlayerLevel]="curPlayer.game_level" [curPlayerGameLevel]="curPlayerGameLevel" class="w-5/12 relative"></player-level-progress-bar>
+  </div>
+  <div  *ngIf="!hide" class="content-container">
+    <div class="flex justify-center items-center mt-5">
+  <h1 class="border-2 w-10/12 mx-auto text-center">Roll the dice and get the fact about responsible gambling</h1>
+</div>
+  <div class="facts-indicator flex mt-5 justify-evenly flex-wrap">
+    <div *ngFor="let numberObj of numberArr" id="numberRolled" [class]="numberObj.color + ' border-2 w-[20px] h-[20px] p-5 flex justify-center items-center mt-2'">{{numberObj.sumNumber}}</div>
+  </div>
+  <div class="dice-container flex justify-evenly w-full mt-5">
+  <img [class]="animation" [src]="imgsArr[0]" alt="">
+  <img [class]="animation" [src]="imgsArr[1]" alt="">
+</div>
+<div>
+  <button class="border-2 p-2 mt-5" (click)="gameStarts()">{{curBtnStatus}}</button>
+</div>
+</div>
+<div *ngIf="hide" class="relative">
+  <button class="absolute top-0 right-2" (click)="close()">❌</button>
+  <h1 class="text-center">Responsible gambling rule: {{questionNumber}}</h1>
+  <h2 class="text-left">{{numberArr[questionNumber - 2].factTitle}}</h2>
+  <p class="text-left mt-2">{{numberArr[questionNumber - 2].factText}}</p>
+</div>
+<app-back-btn></app-back-btn>
+</div>

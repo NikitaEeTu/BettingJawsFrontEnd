@@ -1,0 +1,21 @@
+#star-img-container {
+  top: -25px;
+  right: -15px;
+  background-image: url(../../images/course-page/course-first-page/star-icon.svg);
+  background-size: cover;
+}
+
+@media screen and (max-width: 650px) {
+  #star-img-container{
+    background-image: none;
+  }
+  #level-indicator{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(253 224 71);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,65 @@
+<div class="block p-6 rounded-lg shadow-lg bg-white max-w-2xl mx-auto mt-20 text-center">
+  <div class="progress-container flex w-full justify-between">
+    <test-page-progress-bar [progressPoint]="curNumberOfProgressPoints.toFixed(2).toString() + '%'" class="w-4/12 bg-gray-200 h-5 mb-6"></test-page-progress-bar>
+    <player-level-progress-bar [playerXP]="curNumberBarXpPoints.toFixed(2).toString() + '%'" [playerXpNumber]="curNumberOfPlayerXPPoints" [curPlayerLevel]="curPlayer.game_level" [curPlayerGameLevel]="curPlayerGameLevel" class="w-5/12 relative"></player-level-progress-bar>
+  </div>
+<h1>Toss a Coin</h1>
+<h2 class="text-red-500 font-bold mt-5">{{attentionMsg}}</h2>
+<div class="your-balance mt-5">
+  <p>Your balance is: {{userMoney | number}}€</p>
+</div>
+
+<div class="bet-setter flex w-8/12 mx-auto border-2 items-baseline mt-5 bg-blue-500">
+  <button [disabled]="hiddenBtn" class="w-3/12" (click)="increaseABet()">+</button>
+  <input type="number" class="mt-5 w-6/12 text-center" [value]="curUserStake" disabled>
+  <button [disabled]="hiddenBtn" class="w-3/12 mb-4" (click)="decreaseABet()">-</button>
+</div>
+
+<div class="select-a-result mx-auto mt-10">
+  <div class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]">
+    <input
+      type="radio"
+      name="inlineRadioOptions"
+      id="inlineRadio1"
+      value="option1"
+      (click)="selectAResult($event)"
+
+      />
+    <label
+      class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer"
+      for="inlineRadio1"
+      >Tail</label
+    >
+  </div>
+  <div class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]">
+    <input
+      type="radio"
+      name="inlineRadioOptions"
+      id="inlineRadio2"
+      value="option2"
+      (click)="selectAResult($event)"
+      />
+    <label
+      class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer"
+      for="inlineRadio2"
+      >Head</label
+    >
+  </div>
+
+</div>
+
+<div [class]="addAClass + ' spin-tails coin relative w-[200px] h-[200px] mx-auto mt-10'">
+  <div class="top-0 left-0 w-full tails h-full absolute mt-5 circle mx-auto rounded-full flex uppercase items-center justify-center bg-yellow-300" (click)="startTheGame()">
+    <div class="inner-circle w-[90%] h-[90%] border-2 rounded-full flex items-center justify-center border-white">
+    <h1>Tail</h1>
+  </div>
+  </div>
+<div class="top-0 left-0 w-full h-full heads absolute mt-5 circle mx-auto rounded-full flex uppercase items-center justify-center bg-yellow-300" (click)="startTheGame()">
+  <div class="inner-circle w-[90%] h-[90%] border-2 rounded-full flex items-center justify-center border-white">
+    <h1>Head</h1>
+  </div>
+</div>
+</div>
+<button *ngIf="restartAGameBtn" (click)="restartAGame()" class="mt-10 border-2 px-10">Restart a game</button>
+<app-back-btn></app-back-btn>
+</div>
